@@ -7,8 +7,8 @@
      (:h1 "Blog"))
     (:section
      (:ul (loop for b in *blog-list*
-		do (:li (:a :href (url-ext b) (format nil "~a" (title b)))
-			(:i (description b))))))))
+		do (:li (:a :href (url-ext b) (:button (format nil "~a" (title b))))
+		        (:i (description b))))))))
 
 (push (hunchentoot:create-prefix-dispatcher "/blog.html" #'blog-home-page)
       hunchentoot:*dispatch-table*)
