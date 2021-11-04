@@ -4,11 +4,11 @@ A simple blog system written in Common Lisp
 
 This is an example of a blog written in Common Lisp, with an automatically updating main blog page.
 
-To try it out, go to site-builder.lisp, change the path to "simple-blog/www/", then in the repl: 
+To see the example, go to site-builder.lisp, change the path to "simple-blog/www/", 
+then in the repl, load the system:
 (in-package :simple-blog)
 (hunchentoot::start *blog-server*)
 
-This is an example of a blog written in Common Lisp, with an automatically updating main blog page.
 
 Use the function #'post-blog-entry to push the blog entry to the main blog page,at the same time as creating its url extension. Any posts including post-blog-entry that are saved in the main folder will be included on the main blog page.
 
